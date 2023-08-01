@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label for="checkbox" class="theme-switch">
+            <input type="checkbox" name="" id="checkbox">
+            <div class="slider"></div>
+        </label>
+    </div>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" name="screen" id="result" class="screen" readonly>
+            <table>
+                <tr>
+                    <td><input type="button" value="C" class="btn color1" onclick="clr()"></td>
+                    <td><input type="button" value="DEL" class="btn color3" onclick="back()"></td>
+                    <td><input type="button" value="%" class="btn color2" onclick="dis('/')"></td>
+                    <td><input type="button" value="/" class="btn color2" onclick="dis('%')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="7" class="btn" onclick="dis('7')"></td>
+                    <td><input type="button" value="8" class="btn" onclick="dis('8')"></td>
+                    <td><input type="button" value="9" class="btn" onclick="dis('9')"></td>
+                    <td><input type="button" value="*" class="btn color2" onclick="dis('*')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="4" class="btn" onclick="dis('4')"></td>
+                    <td><input type="button" value="5" class="btn" onclick="dis('5')"></td>
+                    <td><input type="button" value="6" class="btn" onclick="dis('6')"></td>
+                    <td><input type="button" value="-" class="btn color2" onclick="dis('-')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="1" class="btn" onclick="dis('1')"></td>
+                    <td><input type="button" value="2" class="btn" onclick="dis('2')"></td>
+                    <td><input type="button" value="3" class="btn" onclick="dis('3')"></td>
+                    <td><input type="button" value="+" class="btn color2" onclick="dis('+')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="0" class="btn" onclick="dis('0')"></td>
+                    <td><input type="button" value="00" class="btn" onclick="dis('00')"></td>
+                    <td><input type="button" value="." class="btn" onclick="dis('.')"></td>
+                    <td><input type="button" value="=" class="btn color1" onclick="solve()"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+	    VanillaTilt.init(document.querySelector(".container"), {
+		    max: 15,
+            speed: 400,
+            glare:true,
+            "max-glare":0.3
+	    });
+    </script>
+</body>
+<script src="script.js"></script>
+</html>
