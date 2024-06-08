@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Glass Morphism Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="theme-switch-wrapper">
         <label for="checkbox" class="theme-switch">
-            <input type="checkbox" name="" id="checkbox">
+            <input type="checkbox" id="checkbox">
             <div class="slider"></div>
         </label>
     </div>
     <div class="container">
         <div class="calculator">
-            <input type="text" name="screen" id="result" class="screen" readonly>
+            <input type="text" id="result" class="screen" readonly>
             <table>
                 <tr>
                     <td><input type="button" value="C" class="btn color1" onclick="clr()"></td>
@@ -51,15 +51,15 @@
             </table>
         </div>
     </div>
-    <script type="text/javascript" src="vanilla-tilt.js"></script>
-    <script type="text/javascript">
-	    VanillaTilt.init(document.querySelector(".container"), {
-		    max: 15,
+    <script src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector(".container"), {
+            max: 15,
             speed: 400,
-            glare:true,
-            "max-glare":0.3
-	    });
+            glare: true,
+            "max-glare": 0.3
+        });
     </script>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

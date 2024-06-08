@@ -1,57 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-:root{
-    --main-bg: #3ea7fa; 
-    --btn-bg: #0c2d6b;
-    --btn-color: #f2cc60;
-    --screen-text: #f0f0f0;
-    --btn1-bg: #2a0468;
-    --btn2-bg: #000a1c;
-    --btn3-bg: #235e0a;
+
+:root {
+    --main-bg: #7ed6df; /* Soft teal */
+    --btn-bg: #ff9800; /* Orange */
+    --btn-color: #ffffff; /* White */
+    --screen-text: #424242; /* Dark grey */
+    --btn1-bg: #2196f3; /* Blue */
+    --btn2-bg: #4caf50; /* Green */
+    --btn3-bg: #f44336; /* Red */
 }
-  
-[data-theme="dark"]{
-    --main-bg: #101820FF;
-    --btn-bg: #14ff47;
-    --btn-color: #192f00;
-    --screen-text: #28a745;
-    --btn1-bg: #e5f418;
-    --btn2-bg: #db6d28;
-    --btn3-bg: #dc3545;
+
+[data-theme="dark"] {
+    --main-bg: #212121; /* Dark grey */
+    --btn-bg: #03a9f4; /* Light blue */
+    --btn-color: #000000; /* Black */
+    --screen-text: #ffffff; /* White */
+    --btn1-bg: #ffeb3b; /* Yellow */
+    --btn2-bg: #8bc34a; /* Light green */
+    --btn3-bg: #e91e63; /* Pink */
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    display: flex;  
+
+body {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
     background-color: var(--main-bg);
+    font-family: 'Playfair Display', serif;
 }
-table{
+
+table {
     margin: auto;
 }
-.theme-switch-wrapper{
+
+.theme-switch-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 42px;
     margin-bottom: 20px;
 }
-.theme-switch{
+
+.theme-switch {
     display: inline-block;
     height: 16px;
     position: relative;
     width: 50px;
     margin-right: 12px;
 }
-.theme-switch input{
+
+.theme-switch input {
     display: none;
 }
-.slider{
+
+.slider {
     background-color: #ccc;
     bottom: 0;
     cursor: pointer;
@@ -61,7 +70,8 @@ table{
     top: 0;
     transition: 0.4s;
 }
-.slider:before{
+
+.slider:before {
     background-color: rgb(11, 145, 255);
     content: "";
     bottom: -5px;
@@ -71,20 +81,24 @@ table{
     transition: 0.4s;
     width: 26px;
 }
-input:checked + .slider{
+
+input:checked + .slider {
     background-color: #787878;
 }
-  
-input:checked + .slider:before{
+
+input:checked + .slider:before {
     transform: translateX(26px);
 }
-.slider{
+
+.slider {
     border-radius: 34px;
 }
-.slider::before{
+
+.slider::before {
     border-radius: 50%;
 }
-.container{
+
+.container {
     position: relative;
     padding: 10px;
     border-radius: 6px;
@@ -93,12 +107,14 @@ input:checked + .slider:before{
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
     border-top: 2px solid rgba(255, 255, 255, 0.5);
     border-left: 2px solid rgba(255, 255, 255, 0.5);
-} 
-.container .calculator{
+}
+
+.container .calculator {
     position: relative;
     background: transparent;
 }
-.screen{
+
+.screen {
     margin-bottom: 10px;
     font-size: 23px;
     width: auto;
@@ -109,44 +125,49 @@ input:checked + .slider:before{
     text-align: right;
     padding-right: 15px;
     background: transparent;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    border-right: 1px solid rgba(255,255,255,0.15);
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    border-left: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
     font-weight: bold;
-} 
-.btn{
+}
+
+.btn {
     font-size: 19px;
     width: 77px;
     height: 63px;
     font-weight: bold;
-    font-family: 'Playfair Display', serif;
     background: transparent;
     margin-top: 15px;
-    border-radius: 6px;;
+    border-radius: 6px;
     color: #fff;
     outline: none;
     border: none;
     cursor: pointer;
     user-select: none;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
-.btn:hover{
+
+.btn:hover {
     background: rgba(255, 255, 255, 0.1);
 }
-.btn:active{
+
+.btn:active {
     background: var(--btn-bg);
     color: var(--btn-color);
     font-size: 24px;
     font-weight: 500;
     transition: 0.1s;
 }
-.color1{
+
+.color1 {
     color: var(--btn1-bg);
 }
-.color2{
-    color: var( --btn2-bg);
+
+.color2 {
+    color: var(--btn2-bg);
 }
-.color3{
-    color: var( --btn3-bg);
+
+.color3 {
+    color: var(--btn3-bg);
 }
